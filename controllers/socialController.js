@@ -27,11 +27,12 @@ const mineSocial = async (req, res) => {
         // make request to twitter
         const response = await axios.get('twitter_api', {
             Headers: {
-                Authorization: 'Bearer <Our API key>'
+                Authorization: `Bearer ${process.env.X_API_KEY}`
             },
             params: {
-                keywords: 'fire',
-                location: 'geographic-coordinates'
+                q: 'fire',
+                result_type: 'recent',
+                count: 10
             }
         });
 
