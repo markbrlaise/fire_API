@@ -22,7 +22,7 @@ app.use('/api/fire', fireRoute);
 app.use('/api/social', socialRoute);
 app.use('/api/message', sendRoute);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT; //|| 3000;
 
 app.listen(port, () => {
     console.log(`Server running on ${process.env.BASE_URL}:${port}`);
